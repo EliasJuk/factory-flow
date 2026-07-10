@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../dashboard/dashboard_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -30,15 +31,11 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        const SnackBar(
-          content: Text(
-            'A autenticação será implementada na próxima etapa.',
-          ),
-        ),
-      );
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute<void>(
+        builder: (_) => const DashboardPage(),
+      ),
+    );
   }
 
   @override

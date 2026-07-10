@@ -1,0 +1,28 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+# Garante uma linha em branco no final de todos os arquivos.
+insert_final_newline = true
+# Remove espaços em branco desnecessários no final das linhas.
+trim_trailing_whitespace = true
+
+[*.dart]
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[*.sql]
+indent_size = 4
+
+[*.md]
+# Preserva espaços no final das linhas, pois podem representar
+# quebras de linha válidas na sintaxe Markdown.
+trim_trailing_whitespace = false

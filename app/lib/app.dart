@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'modules/login/login_page.dart';
 import 'theme/app_theme.dart';
 
 class FactoryFlowApp extends StatelessWidget {
@@ -13,11 +14,7 @@ class FactoryFlowApp extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: ThemeMode.dark,
-      home: const Scaffold(
-        body: Center(
-          child: Text('FactoryFlow'),
-        ),
-      ),
+      home: const LoginPage(),
     );
   }
 }

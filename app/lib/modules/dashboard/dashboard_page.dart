@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../settings/settings_page.dart';
 import '../users/users_page.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -9,6 +10,14 @@ class DashboardPage extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => const UsersPage(),
+      ),
+    );
+  }
+
+  void _openSettings(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => const SettingsPage(),
       ),
     );
   }
@@ -29,6 +38,11 @@ class DashboardPage extends StatelessWidget {
               title: 'Usuários',
               icon: Icons.people_outline,
               onTap: () => _openUsers(context),
+            ),
+            _DashboardCard(
+              title: 'Configurações',
+              icon: Icons.settings_outlined,
+              onTap: () => _openSettings(context),
             ),
           ],
         ),
